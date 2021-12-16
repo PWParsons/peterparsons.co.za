@@ -15,7 +15,7 @@
         </a>
     </div>
     <div class="space-y-2">
-        <h3 class="px-3 text-xs font-semibold text-slate-500 uppercase tracking-wider" id="writings-headline">
+        <h3 class="px-3 text-xs font-semibold text-slate-400 uppercase tracking-wider" id="writings-headline">
             Writings
         </h3>
         <div class="space-y-1" role="group" aria-labelledby="writings-headline">
@@ -23,13 +23,40 @@
                 <svg class="text-slate-400 group-hover:text-slate-500 mr-3 flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
                 </svg>
+                PHP
+            </a>
 
-                Laravel
+            <a href="/" class="mono text-slate-600 hover:bg-slate-50 hover:text-slate-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                <svg class="text-slate-400 group-hover:text-slate-500 mr-3 flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                </svg>
+                Javascript
+            </a>
+
+            <a href="/" class="text-slate-600 hover:bg-slate-50 hover:text-slate-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                <svg class="text-slate-400 group-hover:text-slate-500 mr-3 flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                </svg>
+                Rust
+            </a>
+
+            <a href="/" class="text-slate-600 hover:bg-slate-50 hover:text-slate-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                <svg class="text-slate-400 group-hover:text-slate-500 mr-3 flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                </svg>
+                Servers
+            </a>
+
+            <a href="/" class="text-slate-600 hover:bg-slate-50 hover:text-slate-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                <svg class="text-slate-400 group-hover:text-slate-500 mr-3 flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                </svg>
+                Blockchain
             </a>
         </div>
     </div>
     <div class="space-y-2">
-        <h3 class="px-3 text-xs font-semibold text-slate-500 uppercase tracking-wider" id="projects-headline">
+        <h3 class="px-3 text-xs font-semibold text-slate-400 uppercase tracking-wider" id="projects-headline">
             Projects
         </h3>
         <div class="space-y-1" role="group" aria-labelledby="projects-headline">
@@ -42,7 +69,7 @@
         </div>
     </div>
     <div class="space-y-2">
-        <h3 class="px-3 text-xs font-semibold text-slate-500 uppercase tracking-wider" id="online-headline">
+        <h3 class="px-3 text-xs font-semibold text-slate-400 uppercase tracking-wider" id="online-headline">
             Online
         </h3>
         <div class="space-y-1" role="group" aria-labelledby="online-headline">
