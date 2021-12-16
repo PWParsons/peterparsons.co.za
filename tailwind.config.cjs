@@ -5,7 +5,7 @@ const config = {
 	theme: {
 		extend: {
 			fontFamily: {
-				mono: ['Jetbrains Mono'],
+				mono: ['Jetbrains Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
 			},
 		}
 	},
