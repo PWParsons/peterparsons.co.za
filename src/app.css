@@ -10,9 +10,9 @@
 }
 
 html {
-    @apply h-full bg-slate-100;
+    @apply h-full scroll-smooth;
 }
 
 body {
-    @apply h-full font-mono;
+    @apply h-full font-mono bg-slate-100 dark:bg-mirage;
 }
