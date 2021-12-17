@@ -8,31 +8,19 @@
 
     let mobileSidebarIsOpen = false;
     let showScrollToTopButton = false;
-    let colorTheme;
+    let darkMode = true;
 
     onMount(() => {
         document.addEventListener('scroll', () => {
-            showScrollToTopButton = (document.body.scrollTop > 135 || document.documentElement.scrollTop > 135)
+            showScrollToTopButton = document.documentElement.scrollTop > 135
         })
 
-        colorTheme = localStorage.theme;
+        darkMode = localStorage.darkMode === 'true';
     });
 
-    function toDarkMode() {
-        colorTheme = 'dark';
-        localStorage.theme = 'dark';
-        window.updateTheme();
-    }
-
-    function toLightMode() {
-        colorTheme = 'light';
-        localStorage.theme = 'light';
-        window.updateTheme();
-    }
-
-    function toSystemMode() {
-        colorTheme = 'system';
-        localStorage.theme = 'system';
+    function toggleDarkMode() {
+        darkMode = !darkMode;
+        localStorage.darkMode = darkMode;
         window.updateTheme();
     }
 
@@ -99,18 +87,18 @@
                     </form>
                 </div>
                 <div class="ml-4 flex items-center md:ml-6">
-                    {#if colorTheme === 'dark'}
-                        <button on:click="{() => toLightMode()}" in:fly="{{ x: 30, duration: 200 }}" type="button" class="p-1 rounded-full text-slate-400 dark:text-lime-400 hover:text-slate-500 dark:hover:text-lime-500 focus:outline-none focus:ring-0">
+                    {#if darkMode}
+                        <button on:click="{() => toggleDarkMode()}" in:fly="{{ x: 30, duration: 200 }}" type="button" class="p-1 rounded-full text-slate-400 dark:text-lime-400 hover:text-slate-500 dark:hover:text-lime-500 focus:outline-none focus:ring-0">
                             <span class="sr-only">Enable light mode</span>
                             <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                             </svg>
                         </button>
                     {:else}
-                        <button on:click="{() => toDarkMode()}" in:fly="{{ x: 30, duration: 200 }}" type="button" class="p-1 rounded-full text-blue-600 hover:text-blue-700 focus:outline-none focus:ring-0">
+                        <button on:click="{() => toggleDarkMode()}" in:fly="{{ x: 30, duration: 200 }}" type="button" class="p-1 rounded-full text-blue-600 hover:text-blue-700 focus:outline-none focus:ring-0">
                             <span class="sr-only">Enable dark mode</span>
                             <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                             </svg>
                         </button>
                     {/if}

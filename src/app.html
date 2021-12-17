@@ -7,41 +7,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<script>
-			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-				if (localStorage.theme === 'system') {
-					if (e.matches) {
-						document.documentElement.classList.add('dark');
-					} else {
-						document.documentElement.classList.remove('dark');
-					}
-				}
-			});
-
 			function updateTheme() {
-				if (!('theme' in localStorage)) {
-					localStorage.theme = 'system';
-				}
+				localStorage.darkMode = localStorage.darkMode ?? 'true'
 
-				switch (localStorage.theme) {
-					case 'system':
-						if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-							document.documentElement.classList.add('dark');
-						} else {
-							document.documentElement.classList.remove('dark');
-						}
-						document.documentElement.setAttribute('color-theme', 'system');
-						break;
-
-					case 'dark':
-						document.documentElement.classList.add('dark');
-						document.documentElement.setAttribute('color-theme', 'dark');
-						break;
-
-					case 'light':
-						document.documentElement.classList.remove('dark');
-						document.documentElement.setAttribute('color-theme', 'light');
-						break;
-				}
+				localStorage.darkMode === 'true'
+					? document.documentElement.classList.add('dark')
+					: document.documentElement.classList.remove('dark');
 			}
 
 			updateTheme();
