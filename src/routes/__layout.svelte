@@ -34,18 +34,20 @@
 <div>
     {#if mobileSidebarIsOpen}
     <div transition:fade="{{ x: -200, duration: 200 }}" class="fixed inset-0 flex z-40 md:hidden" role="dialog" aria-modal="true">
-        <div transition:fade="{{ x: -200, duration: 200 }}" class="fixed inset-0 bg-slate-600 bg-opacity-75" aria-hidden="true"></div>
+        <div transition:fade="{{ x: -200, duration: 200 }}" class="fixed inset-0 bg-slate-600/75 dark:bg-mirage/75" aria-hidden="true"></div>
         <div transition:fly="{{ x: -200, duration: 300 }}" use:clickOutside={() => mobileSidebarIsOpen = false} class="relative flex-1 flex flex-col max-w-xs w-full bg-white dark:bg-black-pearl">
-            <div class="sticky top-0 z-10 flex-shrink-0 flex items-center py-2 px-1.5 bg-white dark:bg-black-pearl">
-                <button on:click={() => mobileSidebarIsOpen = false} type="button" class="mr-2 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                    <span class="sr-only">Close sidebar</span>
-                    <svg class="text-slate-500 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-                <Logo />
+            <div class="relative">
+                <div class="sticky top-0 z-10 flex-shrink-0 flex items-center py-2 px-1.5 bg-white dark:bg-black-pearl">
+                    <button on:click={() => mobileSidebarIsOpen = false} type="button" class="mr-2 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                        <span class="sr-only">Close sidebar</span>
+                        <svg class="text-slate-500 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                    <Logo />
+                </div>
             </div>
-            <div class="mt-5 flex-1 h-0 overflow-y-auto">
+            <div class="flex-1 h-0 overflow-y-auto">
                 <Navigation />
             </div>
         </div>
