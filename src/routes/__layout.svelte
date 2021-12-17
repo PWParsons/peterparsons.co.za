@@ -15,57 +15,25 @@
             showScrollToTopButton = (document.body.scrollTop > 135 || document.documentElement.scrollTop > 135)
         })
 
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-            if (localStorage.theme === 'system') {
-                if (e.matches) {
-                    document.documentElement.classList.add('dark');
-                } else {
-                    document.documentElement.classList.remove('dark');
-                }
-            }
-        });
-
-        updateTheme();
+        colorTheme = localStorage.theme;
     });
 
-    function updateTheme() {
-        if (!('theme' in localStorage)) {
-            localStorage.theme = 'system';
-        }
-
-        switch (localStorage.theme) {
-            case 'system':
-                if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                    document.documentElement.classList.add('dark');
-                } else {
-                    document.documentElement.classList.remove('dark');
-                }
-                document.documentElement.setAttribute('color-theme', 'system');
-                colorTheme = 'system'
-                break;
-
-            case 'dark':
-                document.documentElement.classList.add('dark');
-                document.documentElement.setAttribute('color-theme', 'dark');
-                colorTheme = 'dark'
-                break;
-
-            case 'light':
-                document.documentElement.classList.remove('dark');
-                document.documentElement.setAttribute('color-theme', 'light');
-                colorTheme = 'light'
-                break;
-        }
-    }
-
     function toDarkMode() {
+        colorTheme = 'dark';
         localStorage.theme = 'dark';
-        updateTheme();
+        window.updateTheme();
     }
 
     function toLightMode() {
+        colorTheme = 'light';
         localStorage.theme = 'light';
-        updateTheme();
+        window.updateTheme();
+    }
+
+    function toSystemMode() {
+        colorTheme = 'system';
+        localStorage.theme = 'system';
+        window.updateTheme();
     }
 
     function scrollToTop() {
