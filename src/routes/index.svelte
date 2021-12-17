@@ -2,11 +2,10 @@
     <div class="text-lg max-w-prose mx-auto">
         <h1>
             <span class="block text-base text-center text-blue-600 dark:text-lime-400 font-semibold tracking-wide uppercase">Introducing</span>
-            <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-4xl">JavaScript for Beginners</span>
+            <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-4xl">Rocket Launch Your Career</span>
         </h1>
-        <p class="mt-8 text-xl text-slate-500 leading-8">Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque id at vitae feugiat egestas ac. Diam nulla orci at in viverra scelerisque eget. Eleifend egestas fringilla sapien.</p>
     </div>
-    <div class="mt-6 prose prose-blue dark:prose-lime prose-lg text-slate-500 dark:text-slate-400 mx-auto">
+    <div class="mt-6 prose prose-blue dark:prose-dark prose-lg text-slate-500 dark:text-slate-400 mx-auto">
         <p>Faucibus commodo massa rhoncus, volutpat. <strong>Dignissim</strong> sed <strong>eget risus enim</strong>. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. <a href="/">Mattis mauris semper</a> sed amet vitae sed turpis id.</p>
         <ul role="list">
             <li>Quis elit egestas venenatis mattis dignissim.</li>
