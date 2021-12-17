@@ -9,7 +9,6 @@ const config = {
 		extend: {
 			fontFamily: {
 				mono: [
-					'Jetbrains Mono',
 					'ui-monospace',
 					'SFMono-Regular',
 					'Menlo',

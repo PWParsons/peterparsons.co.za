@@ -1,3 +1,9 @@
+<script>
+	import { MetaTags } from 'svelte-meta-tags';
+</script>
+
+<MetaTags title="Peter Parsons" description="Software designer and developer living in Cape Winelands South Africa." />
+
 <div class="px-4 sm:px-6 lg:px-8 lg:pt-6">
 	<div class="text-lg max-w-prose mx-auto">
 		<h1>

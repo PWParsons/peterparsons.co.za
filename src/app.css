@@ -2,14 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-	@font-face {
-		font-family: 'JetBrains Mono';
-		src: local(''), url('./fonts/JetBrainsMono-Regular.woff2') format('woff2'),
-			url('./fonts/JetBrainsMono-Regular.woff') format('woff');
-	}
-}
-
 html {
 	@apply h-full scroll-smooth;
 }
