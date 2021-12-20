@@ -13,10 +13,10 @@
     },
     'Writings',
     {
-      href: '/',
+      href: '/writings',
       label: 'HTML',
       icon: 'home',
-      isActive: false,
+      isActive: $page.path === '/writings',
       isExternal: false,
     },
     {

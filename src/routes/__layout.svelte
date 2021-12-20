@@ -211,7 +211,7 @@
       </div>
     </div>
 
-    <div class="flex-1 relative z-0 flex overflow-hidden">
+    <div transition:fade={{ duration: 300 }} class="flex-1 relative z-0 flex overflow-hidden">
       <slot />
     </div>
   </div>
