@@ -2,7 +2,7 @@
   import { onMount } from 'svelte'
   import { fade, fly } from 'svelte/transition'
   import { clickOutside } from '$lib/app'
-  import Navigation from '$lib/Navigation.svelte'
+  import Navigation from '$lib/Sidebar/Navigation.svelte'
   import Logo from '$lib/Logo.svelte'
   import '../app.css'
 
