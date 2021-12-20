@@ -7,7 +7,7 @@
   description="Software designer and developer living in Cape Winelands South Africa."
 />
 
-<div class="px-4 sm:px-6 lg:px-8 lg:pt-6">
+<main class="flex-1 relative z-0 overflow-y-auto focus:outline-none xl:order-last px-6 lg:px-8 pt-12">
   <div class="text-lg max-w-prose mx-auto">
     <h1>
       <span
@@ -72,4 +72,4 @@
       varius sit neque erat velit.
     </p>
   </div>
-</div>
+</main>

@@ -7,5 +7,5 @@ html {
 }
 
 body {
-  @apply h-full font-mono bg-slate-100 dark:bg-mirage;
+  @apply h-full overflow-hidden font-mono bg-slate-100 dark:bg-mirage;
 }

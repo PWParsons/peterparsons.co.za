@@ -37,7 +37,7 @@
   {#if mobileSidebarIsOpen}
     <div
       transition:fade={{ x: -200, duration: 200 }}
-      class="fixed inset-0 flex z-40 md:hidden"
+      class="fixed inset-0 flex z-40 lg:hidden"
       role="dialog"
       aria-modal="true"
     >
@@ -87,7 +87,7 @@
     </div>
   {/if}
 
-  <div class="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0">
+  <div class="hidden lg:flex lg:w-64 lg:flex-col lg:fixed lg:inset-y-0">
     <div
       class="flex flex-col flex-grow border-r border-slate-200 dark:border-mirage bg-white dark:bg-black-pearl overflow-y-auto"
     >
@@ -101,14 +101,14 @@
       </div>
     </div>
   </div>
-  <div class="md:pl-64 flex flex-col flex-1">
+  <div class="lg:pl-64 flex flex-col flex-1">
     <div
       class="sticky top-0 z-10 flex-shrink-0 flex h-14 bg-white dark:bg-black-pearl border-b border-slate-200 dark:border-mirage"
     >
       <button
         on:click={() => (mobileSidebarIsOpen = true)}
         type="button"
-        class="px-4 text-slate-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-600 md:hidden"
+        class="px-4 text-slate-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-600 lg:hidden"
       >
         <span class="sr-only">Open sidebar</span>
         <svg
@@ -211,11 +211,9 @@
       </div>
     </div>
 
-    <main class="flex-1">
-      <div class="px-4 sm:px-6 lg:px-8 py-6">
-        <slot />
-      </div>
-    </main>
+    <div class="flex-1 relative z-0 flex overflow-hidden">
+      <slot />
+    </div>
   </div>
 
   <div class="z-10 fixed right-0 rounded-full bottom-0 mr-5 mb-5 sm:mr-6 sm:mb-6 shadow-2xl">
