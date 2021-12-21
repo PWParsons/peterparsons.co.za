@@ -1,7 +1,7 @@
 <script>
   import { page } from '$app/stores'
   import NavigationItem from '$lib/Sidebar/NavigationItem.svelte'
-  import Icon from "$lib/Icon.svelte"
+  import Icon from '$lib/Icon.svelte'
 
   const links = [
     {

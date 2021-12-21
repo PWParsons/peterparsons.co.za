@@ -7,7 +7,9 @@
   description="Software designer and developer living in Cape Winelands South Africa."
 />
 
-<main class="flex-1 relative z-0 overflow-y-auto focus:outline-none xl:order-last px-6 lg:px-8 pt-12">
+<main
+  class="flex-1 relative z-0 h-screen overflow-y-auto focus:outline-none xl:order-last px-6 lg:px-8 pt-12"
+>
   <div class="text-lg max-w-prose mx-auto">
     <h1>
       <span
@@ -21,7 +23,7 @@
     </h1>
   </div>
   <div
-    class="mt-6 prose prose-blue dark:prose-dark prose-lg text-slate-500 dark:text-slate-400 mx-auto"
+    class="mt-6 prose prose-blue dark:prose-dark prose-lg text-slate-500 dark:text-slate-400 prose-a:text-blue-600 dark:prose-a:text-lime-400 prose-headings:text-slate-900 dark:prose-headings:text-white prose-strong:text-slate-500 dark:prose-strong:text-slate-400 mx-auto"
   >
     <p>
       Faucibus commodo massa rhoncus, volutpat. <strong>Dignissim</strong> sed
@@ -48,12 +50,6 @@
       pellentesque id sed tellus mauris, ultrices mauris. Tincidunt enim cursus ridiculus mi.
       Pellentesque nam sed nullam sed diam turpis ipsum eu a sed convallis diam.
     </p>
-    <blockquote>
-      <p>
-        Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur
-        neque tristique pellentesque. Blandit amet, sed aenean erat arcu morbi.
-      </p>
-    </blockquote>
     <p>
       Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper
       sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus
