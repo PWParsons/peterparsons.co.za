@@ -44,7 +44,9 @@
         class="relative flex-1 flex flex-col max-w-xs w-full bg-white dark:bg-black-pearl"
       >
         <div class="relative">
-          <div class="sticky top-0 z-10 flex-shrink-0 flex items-center py-2 px-1.5 bg-white dark:bg-black-pearl">
+          <div
+            class="sticky top-0 z-10 flex-shrink-0 flex items-center py-2 px-1.5 bg-white dark:bg-black-pearl"
+          >
             <button
               on:click={() => (mobileSidebarIsOpen = false)}
               type="button"
@@ -79,8 +81,12 @@
 
   <div class="hidden lg:flex lg:w-64 lg:flex-col lg:fixed lg:inset-y-0">
     <!-- Desktop Sidebar Start -->
-    <div class="flex flex-col flex-grow border-r border-slate-200 dark:border-mirage bg-white dark:bg-black-pearl overflow-y-auto">
-      <div class="sticky top-0 z-10 flex items-center flex-shrink-0 p-4 bg-white dark:bg-black-pearl opacity-90">
+    <div
+      class="flex flex-col flex-grow border-r border-slate-200 dark:border-mirage bg-white dark:bg-black-pearl overflow-y-auto"
+    >
+      <div
+        class="sticky top-0 z-10 flex items-center flex-shrink-0 p-4 bg-white dark:bg-black-pearl opacity-90"
+      >
         <Logo />
       </div>
       <div class="mt-5 flex-grow flex flex-col">
@@ -91,7 +97,9 @@
   <!-- Desktop Sidebar End -->
   <div class="lg:pl-64 flex flex-col flex-1">
     <!-- Top Bar Start -->
-    <div class="sticky top-0 z-10 flex-shrink-0 flex h-14 bg-white dark:bg-black-pearl border-b border-slate-200 dark:border-mirage">
+    <div
+      class="sticky top-0 z-10 flex-shrink-0 flex h-14 bg-white dark:bg-black-pearl border-b border-slate-200 dark:border-mirage"
+    >
       <button
         on:click={() => (mobileSidebarIsOpen = true)}
         type="button"

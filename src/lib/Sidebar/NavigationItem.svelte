@@ -1,5 +1,5 @@
 <script>
-  import Icon from "$lib/Icon.svelte"
+  import Icon from '$lib/Icon.svelte'
 
   export let isExternal = false
   export let isActive = false
@@ -17,7 +17,9 @@
   <slot />
 
   {#if isExternal}
-    <span class="text-slate-500 dark:text-slate-600 group-hover:text-blue-600 dark:group-hover:text-lime-400 mr-1 ml-auto flex-shrink-0 h-3 w-3">
+    <span
+      class="text-slate-500 dark:text-slate-600 group-hover:text-blue-600 dark:group-hover:text-lime-400 mr-1 ml-auto flex-shrink-0 h-3 w-3"
+    >
       <Icon name="external-link" />
     </span>
   {/if}

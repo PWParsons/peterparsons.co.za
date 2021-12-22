@@ -1,6 +1,6 @@
 <script>
   import { fade } from 'svelte/transition'
-  import Icon from "$lib/Icon.svelte"
+  import Icon from '$lib/Icon.svelte'
 
   export let show = false
 
