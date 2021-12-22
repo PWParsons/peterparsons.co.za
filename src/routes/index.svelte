@@ -1,5 +1,8 @@
 <script>
   import { MetaTags } from 'svelte-meta-tags'
+  import ScrollToTop from "$lib/ScrollToTop.svelte"
+
+  let showScrollToTopButton = false
 </script>
 
 <MetaTags
@@ -8,8 +11,10 @@
 />
 
 <main
-  class="flex-1 relative z-0 h-screen overflow-y-auto focus:outline-none xl:order-last px-6 lg:px-8 pt-12"
+  on:scroll={() => showScrollToTopButton = true}
+  class="flex-1 relative z-0 h-screen overflow-y-auto focus:outline-none xl:order-last px-6 lg:px-8 py-12"
 >
+
   <div class="text-lg max-w-prose mx-auto">
     <h1>
       <span
@@ -68,4 +73,6 @@
       varius sit neque erat velit.
     </p>
   </div>
+
+  <ScrollToTop show={showScrollToTopButton} />
 </main>

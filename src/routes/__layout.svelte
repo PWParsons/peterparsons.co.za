@@ -2,19 +2,15 @@
   import { onMount } from 'svelte'
   import { fade, fly } from 'svelte/transition'
   import { clickOutside } from '$lib/app'
-  import Navigation from '$lib/Sidebar/Navigation.svelte'
+  import Icon from '$lib/Icon.svelte'
   import Logo from '$lib/Logo.svelte'
+  import Navigation from '$lib/Sidebar/Navigation.svelte'
   import '../app.css'
 
   let mobileSidebarIsOpen = false
-  let showScrollToTopButton = false
   let darkMode = true
 
   onMount(() => {
-    document.addEventListener('scroll', () => {
-      showScrollToTopButton = document.documentElement.scrollTop > 135
-    })
-
     darkMode = localStorage.darkMode === 'true'
   })
 
@@ -22,10 +18,6 @@
     darkMode = !darkMode
     localStorage.darkMode = darkMode
     window.updateTheme()
-  }
-
-  function scrollToTop() {
-    document.documentElement.scrollTop = 0
   }
 </script>
 
@@ -52,9 +44,7 @@
         class="relative flex-1 flex flex-col max-w-xs w-full bg-white dark:bg-black-pearl"
       >
         <div class="relative">
-          <div
-            class="sticky top-0 z-10 flex-shrink-0 flex items-center py-2 px-1.5 bg-white dark:bg-black-pearl"
-          >
+          <div class="sticky top-0 z-10 flex-shrink-0 flex items-center py-2 px-1.5 bg-white dark:bg-black-pearl">
             <button
               on:click={() => (mobileSidebarIsOpen = false)}
               type="button"
@@ -88,12 +78,9 @@
   {/if}
 
   <div class="hidden lg:flex lg:w-64 lg:flex-col lg:fixed lg:inset-y-0">
-    <div
-      class="flex flex-col flex-grow border-r border-slate-200 dark:border-mirage bg-white dark:bg-black-pearl overflow-y-auto"
-    >
-      <div
-        class="sticky top-0 z-10 flex items-center flex-shrink-0 p-4 bg-white dark:bg-black-pearl opacity-90"
-      >
+    <!-- Desktop Sidebar Start -->
+    <div class="flex flex-col flex-grow border-r border-slate-200 dark:border-mirage bg-white dark:bg-black-pearl overflow-y-auto">
+      <div class="sticky top-0 z-10 flex items-center flex-shrink-0 p-4 bg-white dark:bg-black-pearl opacity-90">
         <Logo />
       </div>
       <div class="mt-5 flex-grow flex flex-col">
@@ -101,10 +88,10 @@
       </div>
     </div>
   </div>
+  <!-- Desktop Sidebar End -->
   <div class="lg:pl-64 flex flex-col flex-1">
-    <div
-      class="sticky top-0 z-10 flex-shrink-0 flex h-14 bg-white dark:bg-black-pearl border-b border-slate-200 dark:border-mirage"
-    >
+    <!-- Top Bar Start -->
+    <div class="sticky top-0 z-10 flex-shrink-0 flex h-14 bg-white dark:bg-black-pearl border-b border-slate-200 dark:border-mirage">
       <button
         on:click={() => (mobileSidebarIsOpen = true)}
         type="button"
@@ -127,61 +114,26 @@
         </svg>
       </button>
 
-      <div class="flex-1 px-4 flex justify-between">
-        <div class="flex-1 flex">
-          <form class="w-full flex md:ml-0" action="#" method="GET">
-            <label for="search-field" class="sr-only">Search</label>
-            <div
-              class="relative w-full text-slate-400 focus-within:text-slate-600 dark:text-slate-400 dark:focus-within:text-slate-300"
-            >
-              <div class="absolute inset-y-0 left-0 flex items-center pointer-events-none">
-                <svg
-                  class="h-5 w-5"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </div>
-              <input
-                id="search-field"
-                class="block w-full h-full pl-8 pr-3 py-2 border-transparent bg-white dark:bg-black-pearl text-slate-900 dark:text-slate-300 placeholder-slate-500 dark:placeholder-slate-400 focus:outline-none focus:placeholder-slate-400 dark:focus:placeholder-slate-500 focus:ring-0 focus:border-transparent sm:text-sm"
-                placeholder="Search..."
-                type="search"
-                name="search"
-              />
-            </div>
-          </form>
+      <div class="flex-1 px-4 flex justify-end">
+        <div class="flex">
+          <button
+            type="button"
+            class="p-1 rounded-full text-slate-400 dark:text-slate-500 hover:text-slate-500 dark:hover:text-slate-400 focus:outline-none focus:ring-0"
+          >
+            <span class="sr-only">Search</span>
+            <Icon name="search" />
+          </button>
         </div>
-        <div class="ml-4 flex items-center md:ml-6">
+        <div class="ml-4 flex items-center">
           {#if darkMode}
             <button
               on:click={() => toggleDarkMode()}
               in:fly={{ x: 30, duration: 200 }}
               type="button"
-              class="p-1 rounded-full text-slate-400 dark:text-lime-400 hover:text-slate-500 dark:hover:text-lime-500 focus:outline-none focus:ring-0"
+              class="p-1 rounded-full text-slate-400 dark:text-lime-400 hover:text-slate-500 dark:hover:text-lime-300 focus:outline-none focus:ring-0"
             >
               <span class="sr-only">Enable light mode</span>
-              <svg
-                class="h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-                />
-              </svg>
+              <Icon name="sun" />
             </button>
           {:else}
             <button
@@ -191,54 +143,18 @@
               class="p-1 rounded-full text-blue-600 hover:text-blue-700 focus:outline-none focus:ring-0"
             >
               <span class="sr-only">Enable dark mode</span>
-              <svg viewBox="0 0 24 24" fill="none" class="w-6 h-6"
-                ><path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M17.715 15.15A6.5 6.5 0 0 1 9 6.035C6.106 6.922 4 9.645 4 12.867c0 3.94 3.153 7.136 7.042 7.136 3.101 0 5.734-2.032 6.673-4.853Z"
-                  class="fill-blue-500/20"
-                />
-                <path
-                  d="m17.715 15.15.95.316a1 1 0 0 0-1.445-1.185l.495.869ZM9 6.035l.846.534a1 1 0 0 0-1.14-1.49L9 6.035Zm8.221 8.246a5.47 5.47 0 0 1-2.72.718v2a7.47 7.47 0 0 0 3.71-.98l-.99-1.738Zm-2.72.718A5.5 5.5 0 0 1 9 9.5H7a7.5 7.5 0 0 0 7.5 7.5v-2ZM9 9.5c0-1.079.31-2.082.845-2.93L8.153 5.5A7.47 7.47 0 0 0 7 9.5h2Zm-4 3.368C5 10.089 6.815 7.75 9.292 6.99L8.706 5.08C5.397 6.094 3 9.201 3 12.867h2Zm6.042 6.136C7.718 19.003 5 16.268 5 12.867H3c0 4.48 3.588 8.136 8.042 8.136v-2Zm5.725-4.17c-.81 2.433-3.074 4.17-5.725 4.17v2c3.552 0 6.553-2.327 7.622-5.537l-1.897-.632Z"
-                  class="fill-blue-600"
-                />
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z"
-                  class="fill-blue-600"
-                />
-              </svg>
+              <Icon name="moon" />
             </button>
           {/if}
         </div>
       </div>
     </div>
+    <!-- Top Bar End -->
 
-    <div transition:fade={{ duration: 300 }} class="flex-1 relative z-0 flex overflow-hidden">
+    <!-- Content Start -->
+    <div transition:fade={{ duration: 300 }} class="flex overflow-hidden">
       <slot />
     </div>
-  </div>
-
-  <div class="z-10 fixed right-0 rounded-full bottom-0 mr-5 mb-5 sm:mr-6 sm:mb-6 shadow-2xl">
-    {#if showScrollToTopButton}
-      <button
-        transition:fade={{ duration: 200 }}
-        on:click={() => scrollToTop()}
-        type="button"
-        class="flex items-center justify-center bg-blue-600 dark:bg-lime-400 rounded-md transform transition duration-300 hover:scale-105 p-2"
-      >
-        <span class="sr-only">Scroll to top</span>
-        <svg
-          class="text-slate-100 dark:text-mirage h-5 w-5"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-        </svg>
-      </button>
-    {/if}
+    <!-- Content End -->
   </div>
 </div>

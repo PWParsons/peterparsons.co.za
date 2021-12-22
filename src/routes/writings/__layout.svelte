@@ -5,6 +5,6 @@
 
 <ListContainer />
 
-<div transition:fade={{ x: -200, duration: 200 }}>
+<div transition:fade={{ duration: 200 }}>
   <slot />
 </div>
