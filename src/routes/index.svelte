@@ -36,7 +36,7 @@
       commodo massa rhoncus, volutpat. Dignissim sed eget risus enim.
       <a href="/">Mattis mauris semper</a> sed amet vitae sed turpis id.
     </p>
-    <ul role="list">
+    <ul>
       <li>Quis elit egestas venenatis mattis dignissim.</li>
       <li>Cras cras lobortis vitae vivamus ultricies facilisis tempus.</li>
       <li>Orci in sit morbi dignissim metus diam arcu pretium.</li>
