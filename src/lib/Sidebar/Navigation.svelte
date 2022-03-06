@@ -8,7 +8,7 @@
       href: '/',
       label: 'Home',
       icon: 'home',
-      isActive: $page.path === '/',
+      isActive: $page.url.pathname === '/',
       isExternal: false,
     },
     'Writings',
@@ -16,7 +16,7 @@
       href: '/writings',
       label: 'HTML',
       icon: 'home',
-      isActive: $page.path === '/writings',
+      isActive: $page.url.pathname === '/writings',
       isExternal: false,
     },
     {
