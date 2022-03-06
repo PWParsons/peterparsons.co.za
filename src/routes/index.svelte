@@ -11,7 +11,7 @@
 />
 
 <main
-  on:scroll={() => (showScrollToTopButton = true)}
+  on:scroll={(e) => showScrollToTopButton = e.target.scrollTop > 140}
   class="flex-1 relative z-0 h-screen overflow-y-auto focus:outline-none xl:order-last px-6 lg:px-8 py-12"
 >
   <div class="text-lg max-w-prose mx-auto">
