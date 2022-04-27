@@ -10,9 +10,7 @@
     </span>
   </h1>
 </div>
-<div
-  class="mt-6 prose prose-blue dark:prose-dark prose-lg text-slate-500 dark:text-slate-400 prose-a:text-blue-600 dark:prose-a:text-lime-400 prose-headings:text-slate-900 dark:prose-headings:text-white prose-strong:text-slate-500 dark:prose-strong:text-slate-400 mx-auto"
->
+<article class="mt-6 prose prose-blue dark:prose-dark prose-lg text-slate-500 dark:text-slate-400 prose-a:text-blue-600 dark:prose-a:text-lime-400 prose-headings:text-slate-900 dark:prose-headings:text-white prose-strong:text-slate-500 dark:prose-strong:text-slate-400 mx-auto">
   <p>
     Faucibus commodo massa rhoncus, volutpat. <strong>Dignissim</strong> sed
     <strong>eget risus enim</strong>. Mattis mauris semper sed amet vitae sed turpis id. Id dolor
@@ -55,4 +53,4 @@
     sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus
     varius sit neque erat velit.
   </p>
-</div>
+</article>
