@@ -89,7 +89,7 @@
       >
         <Logo />
       </div>
-      <div class="mt-5 flex-grow flex flex-col">
+      <div class="flex-grow flex flex-col">
         <Navigation />
       </div>
     </div>

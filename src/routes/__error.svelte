@@ -13,7 +13,7 @@
           Page not found.
         </h1>
         <p class="mt-6 text-base text-slate-400">
-          Sorry, the page you’re looking for could not be found.
+          Sorry, the page you're looking for could not be found.
         </p>
       </div>
     </div>
