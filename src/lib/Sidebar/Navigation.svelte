@@ -71,7 +71,7 @@
         </h3>
       {:else}
         <NavigationItem isExternal={link.isExternal} href={link.href} isActive={link.isActive}>
-          <span class="text-slate-400 dark:text-slate-500 mr-3 flex-shrink-0 h-5 w-5">
+          <span class="text-slate-400 dark:text-slate-500 mr-3 flex-shrink-0 h-4 w-4">
             <Icon name={link.icon} />
           </span>
           {link.label}

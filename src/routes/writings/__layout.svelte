@@ -5,7 +5,7 @@
 
 <ListContainer />
 
-<div class="w-full">
+<div class="w-full relative max-h-screen overflow-y-auto">
   <TopBar/>
 
   <slot />
