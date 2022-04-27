@@ -8,5 +8,7 @@
 <div class="w-full relative max-h-screen overflow-y-auto">
   <TopBar/>
 
-  <slot />
+  <div class="px-6">
+    <slot />
+  </div>
 </div>

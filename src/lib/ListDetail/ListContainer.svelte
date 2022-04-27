@@ -1,6 +1,4 @@
-<aside
-  class="relative xl:order-first flex flex-col flex-shrink-0 w-full md:w-96 bg-white dark:bg-black-pearl border-r border-slate-200 dark:border-mirage overflow-y-auto"
->
+<aside class="block:sm relative xl:order-first flex flex-col flex-shrink-0 w-full md:w-96 bg-white dark:bg-black-pearl border-r border-slate-200 dark:border-mirage overflow-y-auto">
   <div class="absolute inset-0 p-3">
 
     <div>
