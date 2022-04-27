@@ -1,16 +1,10 @@
 import preprocess from 'svelte-preprocess'
-import adapter from '@sveltejs/adapter-netlify'
-
-const dev = true
+import cloudflare from '@sveltejs/adapter-cloudflare';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   kit: {
-    adapter: adapter(),
-
-    prerender: {
-      default: true,
-    },
+		adapter: cloudflare(),
   },
 
   preprocess: [
