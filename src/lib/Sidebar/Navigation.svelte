@@ -13,7 +13,7 @@
     },
     'Writings',
     {
-      href: '/',
+      href: '/writings',
       label: 'Javascript',
       icon: 'home',
       isActive: $page.url.pathname === '/writings',
