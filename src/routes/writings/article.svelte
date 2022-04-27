@@ -1,4 +1,4 @@
-<div class="text-lg max-w-prose mx-auto my-12">
+<div class="text-lg max-w-prose mx-auto m-12">
   <h1>
     <span
       class="block text-base text-center text-blue-600 dark:text-lime-400 font-semibold tracking-wide uppercase"
