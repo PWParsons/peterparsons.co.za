@@ -13,20 +13,6 @@
     },
     'Writings',
     {
-      href: '/writings',
-      label: 'HTML',
-      icon: 'home',
-      isActive: $page.url.pathname === '/writings',
-      isExternal: false,
-    },
-    {
-      href: '/',
-      label: 'CSS',
-      icon: 'home',
-      isActive: false,
-      isExternal: false,
-    },
-    {
       href: '/',
       label: 'Javascript',
       icon: 'home',
