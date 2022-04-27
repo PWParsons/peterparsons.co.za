@@ -16,7 +16,7 @@
       href: '/',
       label: 'Javascript',
       icon: 'home',
-      isActive: false,
+      isActive: $page.url.pathname === '/writings',
       isExternal: false,
     },
     {
