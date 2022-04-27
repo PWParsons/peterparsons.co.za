@@ -33,14 +33,6 @@
       isActive: false,
       isExternal: false,
     },
-    'Projects',
-    {
-      href: '/',
-      label: 'Tusk',
-      icon: 'home',
-      isActive: false,
-      isExternal: true,
-    },
     'Online',
     {
       href: 'https://twitter.com/PW_Parsons',
